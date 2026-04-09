@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cor1: #323232;
+    --cor2: #3B3B3B;
+    --cor3: #202020;
+    --cor4: #fff;
+    --cor5: #CAD0B2;
+    --cor6: #000;
+    --cor7: #76B9ED;
+    --cor8: #479ee0;
+    --font1: Arial, Helvetica, sans-serif;
+    --font2: 'digital';
+}
+
 @font-face {
     font-family: 'digital';
     src: url(fonts/LCDMB___.TTF);
@@ -13,22 +26,29 @@ body {
     display: flex;
     height: 100vh;
     justify-content: center;
-    background: linear-gradient(to top, #2e2e2e, #3B3B3B);
+    background: linear-gradient(to top, var(--cor3), var(--cor2));
 }
 
 .calculator {
-    background-color: #202020;
+    background-color: var(--cor3);
     width: 100%;
     max-width: 400px;
     max-height: 900px;
     margin: auto;
     padding-bottom: 20px;
     border-radius: 10px;
+    border: 1.5px solid var(--cor2);
+}
+
+h1 {
+    margin: 20px;
+    color: var(--cor4);
+    font-family: var(--font1);
 }
 
 #display {
-    font-family: 'digital';
-    background-color: #CAD0B2;
+    font-family: var(--font2);
+    background-color: var(--cor5);
     width: 90%;
     height: 80px;
     display: block;
@@ -36,9 +56,10 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+    border: none;
     text-align: right;
     font-size: 50px;
-    color: green;
+    color: var(--cor6);
 }
 
 .box-buttons {
@@ -53,9 +74,9 @@ body {
 button {
     border-radius: 5px;
     border: none;
-    color: white;
+    color: var(--cor4);
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font1);
     font-size: 24px;
 }
 
@@ -64,34 +85,34 @@ button {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: #323232;
+    background-color: var(--cor1);
     transition: 0.5s;
 }
 
 .clear:hover, .operators:hover {
-    background-color: #3B3B3B;
+    background-color: var(--cor2);
 }
 
 .operators {
-    background-color: #323232;
+    background-color: var(--cor1);
     transition: 0.5s;
 }
 
 .numbers {
-    background-color: #3B3B3B;
+    background-color: var(--cor2);
     transition: 0.5s;
 }
 
 .numbers:hover {
-    background-color: #323232;
+    background-color: var(--cor1);
 }
 
 .result {
-    background-color: #76B9ED;
-    color: black;
+    background-color: var(--cor7);
+    color: var(--cor6);
     transition: 0.5s;
 }
 
 .result:hover {
-    background-color: #61b1ee;
+    background-color: var(--cor8);
 }
