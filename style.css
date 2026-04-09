@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'digital';
+    src: url(fonts/LCDMB___.TTF);
+}
+
 body {
     display: flex;
     height: 100vh;
     justify-content: center;
+    background: linear-gradient(to top, #2e2e2e, #3B3B3B);
 }
 
 .calculator {
@@ -21,6 +27,7 @@ body {
 }
 
 #display {
+    font-family: 'digital';
     background-color: #CAD0B2;
     width: 90%;
     height: 80px;

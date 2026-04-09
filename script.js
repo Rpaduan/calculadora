@@ -1,12 +1,26 @@
 
-let display = document.getElementById("display")
+//let display = document.getElementById("display")
+const operators = ["+", "-", "*", "/"]
 
 function insertToDisplay(content) {
-    document.getElementById("display").value += content
+    let actualValor = display.value 
+    let last = actualValor.slice(-1)
+
+    if (operators.includes(content)) {
+        if (operators.includes(last)) {
+            display.value = actualValor.slice(0, -1) + content
+            return
+        }   
+    
+        if (actualValor === "") return
+
+    }
+
+    display.value += content
 }
 
-function clean(content) {
-    document.getElementById("display").value = content
+function clean() {
+    display.value = ""
 }
 
 function back() {
@@ -15,8 +29,10 @@ function back() {
 
 function result() {   
     try {
+        if (display.value === "") return
         display.value = eval(display.value)
     } catch {
         display.value = 'Error'
     }
 }
+
