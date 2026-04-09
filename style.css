@@ -4,32 +4,87 @@
     box-sizing: border-box;
 }
 
-main {
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: #202020;
     width: 100%;
     max-width: 400px;
-    height: 100%;
-    max-height: 500px;
+    max-height: 900px;
     margin: auto;
-    border: 1px solid red;
+    padding-bottom: 20px;
+    border-radius: 10px;
 }
 
-.visor {
+#display {
+    background-color: #CAD0B2;
     width: 90%;
-    height: 50px;
+    height: 80px;
+    display: block;
     margin: auto;
-    margin-top: 10px;
-    border: 1px solid green;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 50px;
+    color: green;
 }
 
-.teclas {
+.box-buttons {
     width: 90%;
-    border: 1px solid blue;
     margin: auto;
     display: grid;
-    
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, 80px);
+    gap: 3px;
 }
 
-#botao {
-    grid-template-rows: 5;
-    grid-template-columns: 4;
+button {
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.clear {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #323232;
+    transition: 0.5s;
+}
+
+.clear:hover, .operators:hover {
+    background-color: #3B3B3B;
+}
+
+.operators {
+    background-color: #323232;
+    transition: 0.5s;
+}
+
+.numbers {
+    background-color: #3B3B3B;
+    transition: 0.5s;
+}
+
+.numbers:hover {
+    background-color: #323232;
+}
+
+.result {
+    background-color: #76B9ED;
+    color: black;
+    transition: 0.5s;
+}
+
+.result:hover {
+    background-color: #61b1ee;
 }
