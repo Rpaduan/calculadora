@@ -13,6 +13,8 @@
     --cor6: #000;
     --cor7: #76B9ED;
     --cor8: #479ee0;
+    --cor9: rgb(204, 1, 1);
+    --cor10: rgb(153, 1, 1);
     --font1: Arial, Helvetica, sans-serif;
     --font2: 'digital';
 }
@@ -85,17 +87,22 @@ button {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: var(--cor1);
+    background-color: var(--cor9);
     transition: 0.5s;
 }
 
-.clear:hover, .operators:hover {
-    background-color: var(--cor2);
+.clear:hover {
+    background-color: var(--cor10);
 }
+
 
 .operators {
     background-color: var(--cor1);
     transition: 0.5s;
+}
+
+.operators:hover {
+    background-color: var(--cor2);
 }
 
 .numbers {
