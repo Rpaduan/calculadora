@@ -15,6 +15,8 @@ function insertToDisplay(content) {
         if (actualValor === "") return
 
     }
+    
+    if (display.value.length >= 10) return
 
     display.value += content
 }

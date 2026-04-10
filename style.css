@@ -15,6 +15,7 @@
     --cor8: #479ee0;
     --cor9: rgb(204, 1, 1);
     --cor10: rgb(153, 1, 1);
+    --cor11: #cccccc;
     --font1: Arial, Helvetica, sans-serif;
     --font2: 'digital';
 }
@@ -58,10 +59,16 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+    padding: 8px;
     border: none;
     text-align: right;
     font-size: 50px;
     color: var(--cor6);
+    box-shadow: 0 0 10px var(--cor11);
+}
+
+#display:focus {
+    outline: none;
 }
 
 .box-buttons {
