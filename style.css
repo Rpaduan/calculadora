@@ -75,7 +75,7 @@ h1 {
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 80px);
     gap: 3px;
 }
